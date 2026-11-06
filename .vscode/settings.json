@@ -1,0 +1,13 @@
+{
+  // Course settings for VS Code. Scripts use relative paths (data/, outputs/), so they run from their own folder.
+  "python.terminal.executeInFileDir": true,
+  "jupyter.notebookFileRoot": "${fileDirname}",
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.extraPaths": ["sessions/common"],
+  "jupyter.interactiveWindow.creationMode": "perFile",
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/*.egg-info": true
+  }
+}

@@ -1,0 +1,6 @@
+Keys found for: ['nvidia']
+Using provider: nvidia
+A large language model is a type of artificial intelligence that has read through massive amounts of text from the internet and books. It learns patterns in language so it can understand what you’re asking and reply in a way that sounds natural and helpful. You can use it to write emails, answer questions, brainstorm ideas, or even help with coding—all without it having real-life experiences or consciousness.
+nvidia · nvidia/nemotron-3.5-lightning-30b-a3b · 41 in / 490 out · 4.9s · $0.000000
+Stopped because: stop
+The model also 'thought' before answering (1726 characters of reasoning, not shown).

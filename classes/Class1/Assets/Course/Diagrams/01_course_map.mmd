@@ -1,0 +1,84 @@
+---
+config:
+  theme: neutral
+  look: classic
+  layout: dagre
+  fontFamily: "Arial, Helvetica, Liberation Sans, sans-serif"
+  themeVariables:
+    fontSize: "18px"
+    lineColor: "#495057"
+  flowchart:
+    htmlLabels: true
+    wrappingWidth: 400
+    nodeSpacing: 16
+    rankSpacing: 30
+    padding: 10
+    curve: basis
+    subGraphTitleMargin:
+      top: 6
+      bottom: 14
+---
+%% Session 1 - Course map: four modules, two projects, one app that grows
+%% Palette: reuse these classDef names in every course diagram.
+flowchart TB
+
+  subgraph M1["<b>Module 1 · LLM and prompt foundations</b> · <i>weeks 1-3 · sessions 1-8</i>"]
+    direction LR
+    A0["Python for GenAI<br/><i>APIs · databases</i>"]
+    A1["How LLMs work<br/><i>next token · temperature</i>"]
+    A2["Tokens and cost<br/><i>context windows</i>"]
+    A3["Prompt engineering<br/><i>anatomy · patterns · testing</i>"]
+    A4["Structured output<br/><i>data, not prose</i>"]
+    A0 --> A1 --> A2 --> A3 --> A4
+  end
+
+  subgraph M2["<b>Module 2 · Embeddings, vector DBs and RAG</b> · <i>weeks 3-5 · sessions 9-14</i>"]
+    direction LR
+    B1["Embeddings<br/><i>meaning as numbers</i>"]
+    B2["Vector databases<br/><i>store and search</i>"]
+    B3["RAG pipeline<br/><i>retrieve, then answer</i>"]
+    B4["Retrieval quality<br/><i>chunking · evaluation</i>"]
+    B1 --> B2 --> B3 --> B4
+    B4 -.-> P1{{"<b>Project 1</b><br/>Ask-My-Docs<br/><i>Session 14</i>"}}
+  end
+
+  subgraph M3["<b>Module 3 · Tool calling and multimodal</b> · <i>weeks 5-7 · sessions 15-19</i>"]
+    direction LR
+    C1["Tool calling<br/><i>the model acts</i>"]
+    C2["Vision · image generation<br/><i>see and draw</i>"]
+    C3["Speech and audio<br/><i>listen and speak</i>"]
+    C4["Safety and guardrails<br/><i>what it must not do</i>"]
+    C1 --> C2 --> C3 --> C4
+  end
+
+  subgraph M4["<b>Module 4 · Production GenAI</b> · <i>weeks 7-8 · sessions 20-24</i>"]
+    direction LR
+    D1["Frameworks<br/><i>when they help</i>"]
+    D2["API and web UI<br/><i>script to app</i>"]
+    D3["Caching and cost<br/><i>10x cheaper</i>"]
+    D4["Deployment<br/><i>real users</i>"]
+    D1 --> D2 --> D3 --> D4
+    D4 -.-> P2{{"<b>Capstone</b><br/>a deployed GenAI app<br/><i>Session 24</i>"}}
+  end
+
+  M1 ==> M2 ==> M3 ==> M4
+
+  classDef s1 fill:#F1F3F5,stroke:#868E96,stroke-width:1.5px,color:#212529
+  classDef s2 fill:#E7F0FA,stroke:#4A78B0,stroke-width:1.5px,color:#14304F
+  classDef s3 fill:#E3F4EF,stroke:#2D8A74,stroke-width:1.5px,color:#123D33
+  classDef s4 fill:#FFE8CC,stroke:#D9731A,stroke-width:2.5px,color:#4A2506
+  classDef note fill:#FFFFFF,stroke:#ADB5BD,stroke-width:1px,stroke-dasharray:4 3,color:#343A40
+  classDef box1 fill:#FAFBFC,stroke:#868E96,stroke-width:1.5px,color:#212529
+  classDef box2 fill:#F5F9FD,stroke:#4A78B0,stroke-width:1.5px,color:#14304F
+  classDef box3 fill:#F3FAF8,stroke:#2D8A74,stroke-width:1.5px,color:#123D33
+  classDef box4 fill:#FFF6EC,stroke:#D9731A,stroke-width:3.5px,color:#4A2506
+
+  class A1,A2,A3,A4 s2
+  class A0 s4
+  class B1,B2,B3,B4 s3
+  class C1,C2,C3,C4 s1
+  class D1,D2,D3,D4 s2
+  class P1,P2 s4
+  class M1,M4 box2
+  class M2 box3
+  class M3 box1

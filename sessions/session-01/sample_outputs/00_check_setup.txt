@@ -1,0 +1,14 @@
+Where: this computer · folder session-01
+  OK    Python version  · 3.14.6
+  OK    Virtual environment  · .venv
+  OK    openai  · 3.41.0
+  OK    anthropic  · 2.3.0
+  OK    python-dotenv
+  OK    pydantic  · 2.14.1
+  OK    course helper llm.py
+  OK    .env file  · found in this folder
+  OK    NVIDIA_API_KEY  · set · 70 characters
+  OK    Provider in use  · nvidia
+  OK    Live call  · nvidia · nvidia/nemotron-3.5-lightning-30b-a3b · 1.7s · said 'ready'
+
+All set. You're ready for the session.

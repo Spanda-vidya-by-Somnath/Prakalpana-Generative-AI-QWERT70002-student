@@ -1,0 +1,4 @@
+{
+  // VS Code offers to install these when you open the course folder.
+  "recommendations": ["ms-python.python", "ms-python.vscode-pylance", "ms-toolsai.jupyter"]
+}
